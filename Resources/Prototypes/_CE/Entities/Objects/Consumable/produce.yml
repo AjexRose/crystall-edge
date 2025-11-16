@@ -146,9 +146,6 @@
           Quantity: 0.83
         - ReagentId: Vitamin
           Quantity: 0.14
-  #- type: FoodSequenceElement
-  #  entries:
-  #    CESandwich: CECabbageSandwich
   - type: Tag
     tags:
     - CEVegetable
@@ -233,9 +230,6 @@
           Quantity: 1.33
         - ReagentId: Vitamin
           Quantity: 0.57
-  #- type: FoodSequenceElement
-  #  entries:
-  #    CESandwich: CEPumpkinSandwich
   - type: Tag
     tags:
     - CEVegetable
@@ -365,9 +359,6 @@
           Quantity: 1
         - ReagentId: Water
           Quantity: 1.5
-  #- type: FoodSequenceElement
-  #  entries:
-  #    CESandwich: CECucumberSandwich
   - type: Tag
     tags:
     - CEVegetable
@@ -473,9 +464,6 @@
           Quantity: 0.33
         - ReagentId: Vitamin
           Quantity: 0.57
-  #- type: FoodSequenceElement
-  #  entries:
-  #    CESandwich: CETomatoesSandwich
   - type: Tag
     tags:
     - CEVegetable
@@ -565,9 +553,6 @@
           Quantity: 0.83
         - ReagentId: Vitamin
           Quantity: 0.57
-  #- type: FoodSequenceElement
-  #  entries:
-  #    CESandwich: CEAppleSandwich
   - type: Tag
     tags:
     - CEFruits
@@ -640,9 +625,6 @@
           Quantity: 2
         - ReagentId: Vitamin
           Quantity: 1
-  #- type: FoodSequenceElement
-  #  entries:
-  #    CESandwich: CEPepperSandwich
   - type: Tag
     tags:
     - CEVegetable
@@ -718,9 +700,6 @@
           Quantity: 1
         - ReagentId: Allicin
           Quantity: 0.8
-  #- type: FoodSequenceElement
-  #  entries:
-  #    CESandwich: CEOnionSandwich
   - type: Tag
     tags:
     - CEVegetable
