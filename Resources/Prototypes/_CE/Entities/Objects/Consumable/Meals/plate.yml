@@ -39,7 +39,7 @@
   - type: PhysicalComposition
     materialComposition:
       CEWood: 20
-  - type: Food
+  - type: Edible
     trash:
     - CEPlateWooden
 
@@ -55,6 +55,6 @@
   - type: PhysicalComposition
     materialComposition:
       CEIron: 10
-  - type: Food
+  - type: Edible
     trash:
     - CEPlateIron
