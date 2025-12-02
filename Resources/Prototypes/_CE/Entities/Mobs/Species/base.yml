@@ -199,6 +199,7 @@
   - type: CETradingReputation
   - type: CEBlinker
   - type: CESkillStorage
+  - type: CEVampireEssenceHolder
 
 - type: entity
   parent:
@@ -242,7 +243,7 @@
     - Adrenaline
   - type: Blindable
   - type: Bloodstream
-    bloodReagent: Blood
+    bloodReagent: CEBlood
   - type: FireVisuals
     sprite: _CE/Mobs/Effects/onfire.rsi
     normalState: Small_burning
