@@ -1059,7 +1059,7 @@ ent-CEInstrumentLyra = лира
 ent-CEInstrumentLute = лютня
     .desc = Легенда среди бардов.
 
-ent-CEInstrumentGuitarSkeleton = скелетная гитара
+ent-CEInstrumentGuitarSkeleton = скелютня
     .desc = Истинное оружие для жестокого рок-скелета. Что означает "рок"?
 
 ent-CEWeaponPickaxeIron = железная кирка
@@ -1558,7 +1558,7 @@ ent-CELamppostCurve = { ent-CELamppostBase }
     .desc = { ent-CELamppostBase.desc }
     .suffix = Изогнутый
 
-ent-CETradingSellingPlatform = продающая измерительная платформа
+ent-CETradingSellingPlatform = продающая платформа
     .desc = Позволяет продавать любые предметы и структуры во внешний мир. Полностью заполните платформу маной, чтобы продать всё, что вы на неё поместили.
 
 ent-CEWallLightBase = настенная лампа
@@ -2262,7 +2262,7 @@ ent-CEHeater = нагреватель
 ent-CERecycler = переработчик
     .desc = Большая разрушительная машина, используемая для извлечения энергии из магических предметов путём их уничтожения. Также может использоваться как способ переработки предметов в базовые материалы.
 
-ent-CETradingPlatform = покупающая измерительная платформа
+ent-CETradingPlatform = покупающая платформа
     .desc = Позволяет торговать с внешним миром через розничные торговые сделки.
 
 ent-CEManaCollectorBase = коллектор маны

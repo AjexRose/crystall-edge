@@ -2,7 +2,7 @@
   parent:
   - BaseStructure
   id: CETradingPlatform
-  name: buying dimensional platform
+  name: buying platform
   description: Allows you to trade with the outside world, through retail trade transactions.
   categories: [ ForkFiltered ]
   components:
@@ -55,7 +55,7 @@
 - type: entity
   parent: BaseStructure
   id: CETradingSellingPlatform
-  name: selling dimensional platform
+  name: selling platform
   description: Allows you to sell any items and structures to the outside world. Fill the platform completely with mana to sell whatever you place on it.
   categories: [ ForkFiltered ]
   components:
