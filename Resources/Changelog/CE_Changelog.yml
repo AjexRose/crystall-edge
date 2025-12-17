@@ -23,3 +23,12 @@
   id: 1002
   time: '2025-06-06T18:40:15.0000000+00:00'
   url: https://github.com/crystallpunk-14/crystall-punk-14/pull/1359
+- author: TheShuEd
+  changes:
+  - message: Added a new inventory slot for armor
+    type: Add
+  - message: Added “brass insulator” armor set, providing minor protection against physical damage and excellent protection against magical radiation. For future engineers. Currently available for purchase in stores.
+    type: Add
+  id: 1003
+  time: '2025-06-07T18:40:15.0000000+00:00'
+  url: https://github.com/crystallpunk-14/crystall-edge/pull/132
