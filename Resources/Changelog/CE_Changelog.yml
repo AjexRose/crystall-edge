@@ -56,3 +56,10 @@
   id: 1006
   time: '2025-12-18T11:09:50.0000000+00:00'
   url: https://github.com/crystallpunk-14/crystall-edge/pull/141
+- author: Oberfuhrer
+  changes:
+  - message: Fixed missing component for the stun effect
+    type: Fix
+  id: 1007
+  time: '2025-12-18T11:18:54.0000000+00:00'
+  url: https://github.com/crystallpunk-14/crystall-edge/pull/140
