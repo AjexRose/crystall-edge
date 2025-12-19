@@ -1,11 +1,4 @@
 - type: tradingPosition
-  id: CETradeContractTailors
-  faction: Tailors
-  service: !type:CEBuyItemsService
-    product: CETradeContractTailors
-    count: 1
-
-- type: tradingPosition
   id: CECloth5
   faction: Tailors
   service: !type:CEBuyItemsService
@@ -98,45 +91,45 @@
     count: 1
 
 - type: tradingPosition
-  id: CEClothingSyurkoBlack
+  id: CEClothingShirtSyurkoBlack
   faction: Tailors
   service: !type:CEBuyItemsService
-    product: CEClothingSyurkoBlack
+    product: CEClothingShirtSyurkoBlack
     count: 1
 
 - type: tradingPosition
-  id: CEClothingSyurkoBlue
+  id: CEClothingShirtSyurkoBlue
   faction: Tailors
   service: !type:CEBuyItemsService
-    product: CEClothingSyurkoBlue
+    product: CEClothingShirtSyurkoBlue
     count: 1
 
 - type: tradingPosition
-  id: CEClothingSyurkoGreen
+  id: CEClothingShirtSyurkoGreen
   faction: Tailors
   service: !type:CEBuyItemsService
-    product: CEClothingSyurkoGreen
+    product: CEClothingShirtSyurkoGreen
     count: 1
 
 - type: tradingPosition
-  id: CEClothingSyurkoRed
+  id: CEClothingShirtSyurkoRed
   faction: Tailors
   service: !type:CEBuyItemsService
-    product: CEClothingSyurkoRed
+    product: CEClothingShirtSyurkoRed
     count: 1
 
 - type: tradingPosition
-  id: CEClothingSyurkoWhite
+  id: CEClothingShirtSyurkoWhite
   faction: Tailors
   service: !type:CEBuyItemsService
-    product: CEClothingSyurkoWhite
+    product: CEClothingShirtSyurkoWhite
     count: 1
 
 - type: tradingPosition
-  id: CEClothingSyurkoYellow
+  id: CEClothingShirtSyurkoYellow
   faction: Tailors
   service: !type:CEBuyItemsService
-    product: CEClothingSyurkoYellow
+    product: CEClothingShirtSyurkoYellow
     count: 1
 
 - type: tradingPosition
@@ -631,4 +624,30 @@
   faction: Tailors
   service: !type:CEBuyItemsService
     product: CEClothingShirtMerchant
+    count: 1
+
+# Bags
+
+- type: tradingPosition
+  id: CEClothingBeltPouch
+  priceMarkup: 25
+  faction: Tailors
+  service: !type:CEBuyItemsService
+    product: CEClothingBeltPouch
+    count: 1
+
+- type: tradingPosition
+  id: CEClothingBackBackpack
+  priceMarkup: 25
+  faction: Tailors
+  service: !type:CEBuyItemsService
+    product: CEClothingBackBackpack
+    count: 1
+
+- type: tradingPosition
+  id: CEClothingBackSatchel
+  priceMarkup: 25
+  faction: Tailors
+  service: !type:CEBuyItemsService
+    product: CEClothingBackSatchel
     count: 1

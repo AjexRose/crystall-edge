@@ -11,4 +11,92 @@
     type: Fix
   id: 1000
   time: '2025-06-02T18:40:15.0000000+00:00'
+  url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+- author: TheShuEd
+  changes:
+  - message: Increase salary frequency for guards from 20 minutes to 12 munutes
+    type: Tweak
+  - message: Fixed lighting and fences on the Arrivals ship and map
+    type: Fix
+  - message: The roof of the guard building is now locked on the Shaar map.
+    type: Fix
+  id: 1002
+  time: '2025-06-06T18:40:15.0000000+00:00'
   url: https://github.com/crystallpunk-14/crystall-punk-14/pull/1359
+- author: TheShuEd
+  changes:
+  - message: Added a new inventory slot for armor
+    type: Add
+  - message: "Added \u201Cbrass insulator\u201D armor set, providing minor protection\
+      \ against physical damage and excellent protection against magical radiation.\
+      \ For future engineers. Currently available for purchase in stores."
+    type: Add
+  id: 1003
+  time: '2025-06-07T18:40:15.0000000+00:00'
+  url: https://github.com/crystallpunk-14/crystall-edge/pull/132
+- author: TheShuEd
+  changes:
+  - message: Added automated changelogs, try 5
+    type: Add
+  id: 1004
+  time: '2025-12-17T22:30:05.0000000+00:00'
+  url: https://github.com/crystallpunk-14/crystall-edge/pull/138
+- author: TheShuEd
+  changes:
+  - message: Added automated changelogs, try 6
+    type: Add
+  id: 1005
+  time: '2025-12-17T22:35:45.0000000+00:00'
+  url: https://github.com/crystallpunk-14/crystall-edge/pull/139
+- author: TheShuEd
+  changes:
+  - message: "Added trading faction Alcohol Company \u201CRed Heather\u201D. You can\
+      \ buy various alcoholic bottles there!"
+    type: Add
+  id: 1006
+  time: '2025-12-18T11:09:50.0000000+00:00'
+  url: https://github.com/crystallpunk-14/crystall-edge/pull/141
+- author: Oberfuhrer
+  changes:
+  - message: Fixed missing component for the stun effect
+    type: Fix
+  id: 1007
+  time: '2025-12-18T11:18:54.0000000+00:00'
+  url: https://github.com/crystallpunk-14/crystall-edge/pull/140
+- author: Oberfuhrer
+  changes:
+  - message: Emotions can now be used via chat in Russian
+    type: Add
+  id: 1008
+  time: '2025-12-18T12:22:25.0000000+00:00'
+  url: https://github.com/crystallpunk-14/crystall-edge/pull/131
+- author: TheShuEd
+  changes:
+  - message: "The antagonist \u201CThief\u201D has been added. No special equipment\
+      \ yet."
+    type: Add
+  - message: Ambitions are no longer limited by time, and the button for adjusting
+      them has been moved to the CharacterInfo Menu.
+    type: Tweak
+  - message: Added BlueText system, allowing antagonist players to save the results
+      of their adventures and display them on the Round End Screen.
+    type: Add
+  - message: The end-of-round text is now broadcast on Discord.
+    type: Add
+  id: 1009
+  time: '2025-12-19T11:09:30.0000000+00:00'
+  url: https://github.com/crystallpunk-14/crystall-edge/pull/143
+- author: Oberfuhrer
+  changes:
+  - message: FIxed item spawning in the backpack via personalization
+    type: Fix
+  id: 1010
+  time: '2025-12-19T11:09:50.0000000+00:00'
+  url: https://github.com/crystallpunk-14/crystall-edge/pull/144
+- author: Oberfuhrer
+  changes:
+  - message: Added Scrambled Eggs recipe
+    type: Add
+  id: 1011
+  time: '2025-12-19T11:10:49.0000000+00:00'
+  url: https://github.com/crystallpunk-14/crystall-edge/pull/145
