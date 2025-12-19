@@ -70,3 +70,33 @@
   id: 1008
   time: '2025-12-18T12:22:25.0000000+00:00'
   url: https://github.com/crystallpunk-14/crystall-edge/pull/131
+- author: TheShuEd
+  changes:
+  - message: "The antagonist \u201CThief\u201D has been added. No special equipment\
+      \ yet."
+    type: Add
+  - message: Ambitions are no longer limited by time, and the button for adjusting
+      them has been moved to the CharacterInfo Menu.
+    type: Tweak
+  - message: Added BlueText system, allowing antagonist players to save the results
+      of their adventures and display them on the Round End Screen.
+    type: Add
+  - message: The end-of-round text is now broadcast on Discord.
+    type: Add
+  id: 1009
+  time: '2025-12-19T11:09:30.0000000+00:00'
+  url: https://github.com/crystallpunk-14/crystall-edge/pull/143
+- author: Oberfuhrer
+  changes:
+  - message: FIxed item spawning in the backpack via personalization
+    type: Fix
+  id: 1010
+  time: '2025-12-19T11:09:50.0000000+00:00'
+  url: https://github.com/crystallpunk-14/crystall-edge/pull/144
+- author: Oberfuhrer
+  changes:
+  - message: Added Scrambled Eggs recipe
+    type: Add
+  id: 1011
+  time: '2025-12-19T11:10:49.0000000+00:00'
+  url: https://github.com/crystallpunk-14/crystall-edge/pull/145
