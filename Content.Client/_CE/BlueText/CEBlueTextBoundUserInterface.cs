@@ -32,10 +32,10 @@ public sealed class CEBlueTextBoundUserInterface : BoundUserInterface
         if (_menu == null)
             return;
 
-        if (state is not CEBlueTextBuiState bluetextState)
+        if (state is not CEBlueTextBuiState blueTextState)
             return;
 
-        _menu.Update(_owner, bluetextState);
+        _menu.Update(_owner, blueTextState);
     }
 
     protected override void Dispose(bool disposing)
@@ -57,6 +57,6 @@ public sealed class CEBlueTextBoundUserInterface : BoundUserInterface
         if (_menu == null)
             return;
 
-        SendMessage(new CEBlueTextSubmitMessage(text));
+        SendMessage(new CEBlueTextSaveMessage(text));
     }
 }

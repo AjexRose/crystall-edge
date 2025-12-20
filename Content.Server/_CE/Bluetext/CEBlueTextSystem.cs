@@ -21,7 +21,7 @@ public sealed class CEBlueTextSystem : CESharedBlueTextSystem
         SubscribeLocalEvent<CEBlueTextRuleComponent, AfterAntagEntitySelectedEvent>(OnAntagAttached);
 
         SubscribeNetworkEvent<CEToggleBlueTextScreenEvent>(OnToggleBlueText);
-        SubscribeLocalEvent<ActorComponent, CEBlueTextSubmitMessage>(OnSubmitBlueText);
+        SubscribeLocalEvent<ActorComponent, CEBlueTextSaveMessage>(OnSaveBlueText);
     }
 
     private void OnAntagAttached(Entity<CEBlueTextRuleComponent> ent, ref AfterAntagEntitySelectedEvent args)
@@ -55,7 +55,7 @@ public sealed class CEBlueTextSystem : CESharedBlueTextSystem
         _userInterface.SetUiState(ent, CEBlueTextUIKey.Key, state);
     }
 
-    private void OnSubmitBlueText(Entity<ActorComponent> ent, ref CEBlueTextSubmitMessage args)
+    private void OnSaveBlueText(Entity<ActorComponent> ent, ref CEBlueTextSaveMessage args)
     {
         if (!_mind.TryGetMind(ent, out var mind, out var mindComp))
             return;

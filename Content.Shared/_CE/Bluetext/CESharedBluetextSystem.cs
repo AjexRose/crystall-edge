@@ -27,7 +27,7 @@ public sealed class CEBlueTextBuiState(string text) : BoundUserInterfaceState
 }
 
 [Serializable, NetSerializable]
-public sealed class CEBlueTextSubmitMessage(string text) : BoundUserInterfaceMessage
+public sealed class CEBlueTextSaveMessage(string text) : BoundUserInterfaceMessage
 {
     public string Text = text;
 }

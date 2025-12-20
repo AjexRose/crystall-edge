@@ -14,3 +14,4 @@
   storage:
     back:
     - CETradeContractBlackMarket
+    - CEThiefHideoutFlag
