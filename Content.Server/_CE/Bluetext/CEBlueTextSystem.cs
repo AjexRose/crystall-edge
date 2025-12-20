@@ -2,6 +2,7 @@ using Content.Server.Antag;
 using Content.Server.Mind;
 using Content.Shared._CE.BlueText;
 using Content.Shared.CCVar;
+using Content.Shared.Players;
 using Robust.Server.GameObjects;
 using Robust.Shared.Configuration;
 using Robust.Shared.Player;
@@ -37,19 +38,13 @@ public sealed class CEBlueTextSystem : CESharedBlueTextSystem
         if (args.SenderSession.AttachedEntity is not {Valid: true} ent)
             return;
 
-        if (!_mind.TryGetMind(ent, out var mind, out var mindComp))
-            return;
-
-        if (!TryComp<CEBlueTextTrackerComponent>(mind, out var blueText))
-            return;
-
-        if (!TryComp<ActorComponent>(ent, out var actor))
+        if (!TryComp<CEBlueTextTrackerComponent>(args.SenderSession.GetMind(), out var blueText))
             return;
 
         if (!_cfg.GetCVar(CCVars.CEGameShowBlueText))
             return;
 
-        _userInterface.TryToggleUi(ent, CEBlueTextUIKey.Key, actor.PlayerSession);
+        _userInterface.TryToggleUi(ent, CEBlueTextUIKey.Key, args.SenderSession);
 
         var state = new CEBlueTextBuiState(blueText.BlueText);
         _userInterface.SetUiState(ent, CEBlueTextUIKey.Key, state);

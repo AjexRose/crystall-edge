@@ -12,7 +12,7 @@ public sealed partial class CEBlueTextMenu : FancyWindow
 {
     public event Action<string>? OnSubmitBlueText;
 
-    private bool _userHasEdited = false;
+    private bool _edited;
 
     public CEBlueTextMenu()
     {
@@ -32,8 +32,7 @@ public sealed partial class CEBlueTextMenu : FancyWindow
 
     public void Update(EntityUid owner, CEBlueTextBuiState state)
     {
-        // Если пользователь редактировал текст, не перезаписываем его обновлением с сервера
-        if (_userHasEdited)
+        if (_edited)
             return;
 
         var text = state.Text;
@@ -50,7 +49,7 @@ public sealed partial class CEBlueTextMenu : FancyWindow
 
     private void OnTextChanged()
     {
-        _userHasEdited = true;
+        _edited = true;
         ClampAndUpdate();
     }
 
