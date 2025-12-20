@@ -1,21 +1,13 @@
 using System.Numerics;
-using Content.Server._CE.Power.Components;
 using Content.Shared._CE.Power.Components;
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
 using Content.Shared.Interaction.Events;
-using Content.Shared.Throwing;
-using Content.Shared.Timing;
-using Robust.Server.Audio;
 
-namespace Content.Server._CE.Power;
+namespace Content.Shared._CE.Power;
 
-public sealed partial class CEPowerSystem
+public abstract partial class CESharedPowerSystem
 {
-    [Dependency] private readonly ThrowingSystem _throw = default!;
-    [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly AudioSystem _audio = default!;
-
     private void InitializeGlove()
     {
         SubscribeLocalEvent<CEEnergyTransferGloveComponent, AfterInteractEvent>(OnAfterInteract);
@@ -25,7 +17,7 @@ public sealed partial class CEPowerSystem
 
     private void OnAfterInteract(Entity<CEEnergyTransferGloveComponent> ent, ref AfterInteractEvent args)
     {
-        if (args.Target == null || !args.CanReach || _useDelay.IsDelayed(ent.Owner))
+        if (args.Target == null || !args.CanReach || UseDelay.IsDelayed(ent.Owner))
             return;
 
         if (args.Target == args.User)
@@ -34,16 +26,16 @@ public sealed partial class CEPowerSystem
         var user = args.User;
         var target = args.Target.Value;
 
-        _useDelay.TryResetDelay(ent);
+        UseDelay.TryResetDelay(ent);
         _audio.PlayPvs(ent.Comp.UseSound, ent);
 
-        if (!_batteryQuery.TryComp(user, out var userBattery))
+        if (!BatteryQuery.TryComp(user, out var userBattery))
         {
             _popup.PopupEntity(Loc.GetString("ce-energy-transfer-glove-cant-use"), ent, args.User);
             return;
         }
 
-        _batteryQuery.TryComp(target, out var batteryTarget);
+        BatteryQuery.TryComp(target, out var batteryTarget);
         SpawnAtPosition(ent.Comp.VFX, Transform(args.Target.Value).Coordinates);
 
         if (ent.Comp.ConsumeMode)
@@ -51,19 +43,19 @@ public sealed partial class CEPowerSystem
             if (batteryTarget is null)
                 return;
 
-            var drained = -_battery.ChangeCharge((target, batteryTarget), -ent.Comp.TransferAmount);
+            var drained = -Battery.ChangeCharge((target, batteryTarget), -ent.Comp.TransferAmount);
             if (drained <= 0)
                 return;
 
             var drainedPercent = drained / ent.Comp.TransferAmount;
 
-            _battery.ChangeCharge((user, userBattery), drained);
+            Battery.ChangeCharge((user, userBattery), drained);
             PullTowardsUser(target, user, ent.Comp.PullDistance * drainedPercent, ent.Comp.ThrowPower);
             args.Handled = true;
         }
         else
         {
-            var spent = -_battery.ChangeCharge((user, userBattery), -ent.Comp.TransferAmount);
+            var spent = -Battery.ChangeCharge((user, userBattery), -ent.Comp.TransferAmount);
             PushFromUser(target, user, ent.Comp.ThrowDistance, ent.Comp.ThrowPower);
 
             if (batteryTarget is null)
@@ -72,7 +64,7 @@ public sealed partial class CEPowerSystem
             if (spent <= 0)
                 return;
 
-            _battery.ChangeCharge((target, batteryTarget), spent);
+            Battery.ChangeCharge((target, batteryTarget), spent);
             args.Handled = true;
         }
     }
@@ -108,12 +100,12 @@ public sealed partial class CEPowerSystem
 
     private void OnUseInHand(Entity<CEEnergyTransferGloveComponent> ent, ref UseInHandEvent args)
     {
-        if (args.Handled || _useDelay.IsDelayed(ent.Owner))
+        if (args.Handled || UseDelay.IsDelayed(ent.Owner))
             return;
 
         args.Handled = true;
 
-        _useDelay.TryResetDelay(ent);
+        UseDelay.TryResetDelay(ent);
 
         ent.Comp.ConsumeMode = !ent.Comp.ConsumeMode;
         Dirty(ent);

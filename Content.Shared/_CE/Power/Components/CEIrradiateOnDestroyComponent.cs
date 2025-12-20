@@ -1,9 +1,7 @@
-using Robust.Shared.Prototypes;
-
-namespace Content.Server._CE.Power.Components;
+namespace Content.Shared._CE.Power.Components;
 
 /// <summary>
-/// When destroyed, it releases all the energy from BatteryComponet around it in the form of radiation.
+/// When destroyed, it releases all the energy from BatteryComponent around it in the form of radiation.
 /// </summary>
 [RegisterComponent]
 public sealed partial class CEIrradiateOnDestroyComponent : Component

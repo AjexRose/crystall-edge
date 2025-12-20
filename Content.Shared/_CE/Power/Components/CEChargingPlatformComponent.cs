@@ -1,4 +1,4 @@
-namespace Content.Server._CE.Power.Components;
+namespace Content.Shared._CE.Power.Components;
 
 /// <summary>
 /// Charging platform component for items with batteries.
